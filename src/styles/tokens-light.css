@@ -1,0 +1,76 @@
+/* White theme (opt-in through the toggle in the top bar; the Início is always dark). Same variable names, so
+   nothing else in the app changes. The accent family (vivid orange; the dark theme keeps gold) reads as text on white (>= 4.5:1) and carries
+   white ink on fills; the dark "chrome" steps (g9/g8: ticker, hero tiles) become light surfaces. src/styles/contrast.test.ts
+   checks every pair for both themes. Tokens not repeated here (tone3..5, seq1..5, ink, photoov) are the same in both. */
+:root[data-theme="light"] {
+  --g9: #ffeec4; /* chrome: ticker */
+  --g8: #fff0cc; /* hero tile start */
+  --g7: #c2410c; /* accent: primary buttons, active states, links */
+  --g5: #ea580c; /* bright orange (bar gradient start) */
+  --mint: #9a3412; /* hover fill / text accent: darker than the accent on light */
+  --gold: #c2410c;
+  --acc: #c2410c;
+  --accink: #ffffff; /* text on gold fills */
+  --bg: #fff6e8;
+  --card: #ffffff;
+  --surface2: #ffeed2;
+  --line: #f1d9b5;
+  --tx: #1c1917;
+  --mut: #57534e;
+  --g9rgb: 255 238 196;
+  --g8rgb: 255 240 204;
+  --g7rgb: 194 65 12;
+  --g5rgb: 234 88 12;
+  --mintrgb: 154 52 18;
+
+  --linestrong: #78716c;
+  --focus: #c2410c;
+  --focusdark: #9a3412;
+  --warnline: #a87400;
+  --danger: #b42318;
+  --marker: #0b0c0d; /* Resultados matrix: target frontier and nearest-scenario outline, drawn on the tone cells */
+  --mixto: #000000;
+
+  --bartrack: #f6dcb0;
+  --barpos: #1a7f4b;
+  --barneg: #b42318;
+  --barfinal: #c2410c;
+
+  --tone0: #e5604f;
+  --tone1: #b87900;
+  --tone2: #3fae6a;
+  --tonena: #9a9ea0;
+  --sev2: #cf6a2a;
+
+  --cat1: #c2410c;
+  --cat2: #1f6f94;
+  --cat3: #8a3fb0;
+  --cat4: #17795a;
+  --cat5: #b83a2c;
+  --cat6: #4b55c9;
+  --cat7: #a8407f;
+  --cat8: #57534e;
+}
+
+/* Life for the light theme: a vivid sunrise wash behind the page, white cards that pop against it with an
+   orange-to-yellow strip on top, a gradient rule under the top bar. Colour and shadow only: no layout, spacing or
+   text colour changes. */
+:root[data-theme="light"] .bg-bg {
+  background-image:
+    radial-gradient(1100px 520px at 90% -100px, rgba(253, 224, 71, 0.55), transparent 70%),
+    radial-gradient(1000px 480px at 5% -80px, rgba(251, 146, 60, 0.4), transparent 70%);
+  background-repeat: no-repeat;
+}
+:root[data-theme="light"] header.border-b {
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(90deg, #ea580c, #f59e0b 55%, #fde047) 1;
+  border-image-width: 0 0 4px 0;
+  box-shadow: 0 10px 26px -14px rgba(234, 88, 12, 0.55);
+}
+:root[data-theme="light"] .bg-card.border:not(header):not(button):not(a):not(input):not(select),
+:root[data-theme="light"] .bg-card.border-line:not(header):not(button):not(a):not(input):not(select) {
+  background-image: linear-gradient(90deg, #ea580c, #f59e0b 60%, #fde047);
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 2px rgba(120, 53, 15, 0.08), 0 14px 28px -14px rgba(234, 88, 12, 0.42);
+}

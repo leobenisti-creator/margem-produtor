@@ -1,0 +1,76 @@
+{
+  "note": "Fechamento de 26/10/2026 (linha 2026-10-26 do arquivo 09b; a linha de 27/10 está incompleta e nunca é usada). CBOT vem do Yahoo Finance (não oficial) e pode ser ajustado quando a CME publicar o settlement. Basis: último ponto de 2026 da praça Paranaguá em 34_basis_por_praca.csv (coluna basis_c_bu, unidade USc/bu, valores positivos = prêmio sobre o CBOT; sinal confirmado porque (CBOT+basis)/100*bushels*PTAX da soja dá ~R$ 158/sc, próximo do Cepea Paranaguá R$ 155,55). O ponto é semanal de 21/10/2026, digitalizado de gráfico de PDF, sem contrato de referência; o ponto anterior da soja era 127,7 (salto de 127,7 para 61,7 em uma semana, possivelmente troca de contrato), por isso a fonte está marcada 'a confirmar'. Pontos usados: {\"soja\": {\"pointDate\": \"2026-10-21\", \"contratoRef\": \"nao_informado_no_pdf\", \"last5\": [[\"2026-09-23\", 143.6], [\"2026-09-30\", 128.3], [\"2026-10-07\", 115.3], [\"2026-10-14\", 127.7], [\"2026-10-21\", 61.7]]}, \"milho\": {\"pointDate\": \"2026-10-21\", \"contratoRef\": \"nao_informado_no_pdf\", \"last5\": [[\"2026-09-23\", 81.0], [\"2026-09-30\", 81.8], [\"2026-10-07\", 91.7], [\"2026-10-14\", 97.4], [\"2026-10-21\", 98.5]]}}",
+  "snapshot": {
+    "cbotUsc": {
+      "soja": {
+        "value": 1241.25,
+        "unit": "USc/bu",
+        "asOf": "2026-10-26",
+        "source": "CBOT: Yahoo Finance (não oficial)",
+        "kind": "fechamento"
+      },
+      "milho": {
+        "value": 455.0,
+        "unit": "USc/bu",
+        "asOf": "2026-10-26",
+        "source": "CBOT: Yahoo Finance (não oficial)",
+        "kind": "fechamento"
+      }
+    },
+    "fx": {
+      "value": 5.4998,
+      "unit": "R$/US$",
+      "asOf": "2026-10-26",
+      "source": "PTAX: BCB Olinda",
+      "kind": "fechamento"
+    },
+    "b3": {
+      "soja": {
+        "value": 27.3644,
+        "unit": "US$/sc",
+        "asOf": "2026-10-26",
+        "source": "B3 BVBG.086 (SJC, ajuste)",
+        "kind": "fechamento"
+      },
+      "milho": {
+        "value": 66.89,
+        "unit": "R$/sc",
+        "asOf": "2026-10-26",
+        "source": "B3 BVBG.086 (CCM, ajuste)",
+        "kind": "fechamento"
+      }
+    },
+    "cepea": {
+      "soja": {
+        "value": 155.55,
+        "unit": "R$/sc",
+        "asOf": "2026-10-26",
+        "source": "Cepea (cepea.org.br), soja Paranaguá",
+        "kind": "fechamento"
+      },
+      "milho": {
+        "value": 64.24,
+        "unit": "R$/sc",
+        "asOf": "2026-10-26",
+        "source": "Cepea (cepea.org.br), milho",
+        "kind": "fechamento"
+      }
+    },
+    "basisUsc": {
+      "soja": {
+        "value": 61.7,
+        "unit": "USc/bu",
+        "asOf": "2026-10-21",
+        "source": "Basis Paranaguá: Hedgepoint/CME/ESALQ, relatório Basis Soja e Milho 21/10/2026 (ponto semanal de 2026-10-21, gráfico digitalizado, contrato não informado) - a confirmar",
+        "kind": "fechamento"
+      },
+      "milho": {
+        "value": 98.5,
+        "unit": "USc/bu",
+        "asOf": "2026-10-21",
+        "source": "Basis Paranaguá: Hedgepoint/CME/ESALQ, relatório Basis Soja e Milho 21/10/2026 (ponto semanal de 2026-10-21, gráfico digitalizado, contrato não informado) - a confirmar",
+        "kind": "fechamento"
+      }
+    }
+  }
+}

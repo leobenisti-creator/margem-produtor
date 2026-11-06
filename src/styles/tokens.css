@@ -1,0 +1,75 @@
+:root {
+  /* Black-and-gold theme. Variable names are unchanged from the old green theme; the g* steps and
+     mint are now neutral dark surfaces (g9/g8) and gold steps (g7/g5/mint). */
+  --g9: #101213; /* darkest chrome (ticker, sidebar start) */
+  --g8: #181a1c; /* chrome / hero surface */
+  --g7: #e8b04a; /* gold: primary buttons, active states, links */
+  --g5: #b98a2e; /* deep gold (bar gradient start) */
+  --mint: #f2c76e; /* light gold (accent on dark chrome, hover) */
+  --gold: #e8b04a;
+  --acc: #e8b04a;
+  --accink: #1a1204; /* text on gold */
+  --bg: #0b0c0d;
+  --card: #141617;
+  --surface2: #1b1e20;
+  --line: #26292b;
+  --tx: #ecebe6;
+  --mut: #a0a098;
+  /* RGB triplets for Tailwind opacity modifiers (keep in sync with the hex above) */
+  --g9rgb: 16 18 19;
+  --g8rgb: 24 26 28;
+  --g7rgb: 232 176 74;
+  --g5rgb: 185 138 46;
+  --mintrgb: 242 199 110;
+
+  /* Início: dark veil over the photos. Text only sits where the veil is at least OVERLAY_TEXT_ALPHA
+     (src/ui/inicio/overlay.ts); overlay.test.ts checks 4.5:1 for that alpha even over a white pixel. */
+  --photoov: #0b0c0d;
+  --photoovrgb: 11 12 13;
+
+  /* non-text contrast (WCAG 1.4.11 / 2.4.11); names without hyphens so contrast.test.ts can read them */
+  --linestrong: #7b8285; /* field borders: >= 3:1 on card, bg and surface2 */
+  --focus: #e8b04a; /* focus ring: gold, >= 3:1 on card and bg */
+  --focusdark: #f2c76e; /* focus ring inside g8/g9 chrome */
+  --warnline: #c9962f; /* note borders */
+  --danger: #f87171; /* errors and negative numbers */
+  --ink: #0b0c0d; /* dark text drawn on light fills (matrix cells, crop-map slices): dark in both themes */
+  --marker: #ffffff; /* Resultados matrix: target frontier and nearest-scenario outline, drawn on the tone cells */
+  --mixto: #ffffff; /* cost donut: the colour a group hue is mixed towards for its 2nd, 3rd... slice (white here, black in light) */
+
+  /* chart fills (waterfall) */
+  --bartrack: #26292b;
+  --barpos: #4ade80;
+  --barneg: #f87171;
+  --barfinal: #e8b04a;
+
+  /* matrix traffic light (engine/matrix toneFor): tone0 red, tone1 amber, tone2 green; cell text is --bg.
+     tone3..tone5 and seq1..seq5 are no longer painted; kept valid for the legacy scale. */
+  --tone0: #ef7d70;
+  --tone1: #f2c35a;
+  --tone2: #5fd08a;
+  --tone3: #8fdca8;
+  --tone4: #4cc47f;
+  --tone5: #339c6d;
+  /* unknown margin (toneFor null): neutral grey, cell text --bg >= 4.5:1 */
+  --tonena: #9a9ea0;
+  --seq1: #d8f9dd;
+  --seq2: #abe9bb;
+  --seq3: #8fcfa3;
+  --seq4: #74b68d;
+  --seq5: #599d77;
+
+  /* Crop map: how many risks are still open in a part of the crop. closed = --barpos, 1 open = --tone1,
+     2 open = --sev2, 3 open = --barneg. Text on them is dark ink. */
+  --sev2: #f29a5c;
+
+  /* Cost chart: one hue per cost group (donut and legend), each >= 3:1 on card and surface2. */
+  --cat1: #e8b04a;
+  --cat2: #5fb3d4;
+  --cat3: #c586e0;
+  --cat4: #6fd0a0;
+  --cat5: #ef7d70;
+  --cat6: #9fa8f0;
+  --cat7: #d99ac0;
+  --cat8: #a0a098;
+}

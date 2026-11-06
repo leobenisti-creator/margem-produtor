@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margem — simulador de margem do produtor</title>
+    <meta name="description" content="Simule a margem por saca de soja e milho na sua fazenda a partir do fechamento da CBOT, da base e do dólar, com custo, frete e matriz de cenários." />
+    <meta name="theme-color" content="#0b0c0d" />
+    <!-- Colour theme before first paint (no flash): keep in step with src/ui/theme.ts. The saved choice
+         (margem:tema = claro | escuro) applies on every page except the Início, which is always dark. -->
+    <script>
+      (function () {
+        var d = document.documentElement;
+        try {
+          var path = location.hash.split('?')[0];
+          var inner = { '#/simulador': 1, '#/comercializacao': 1, '#/resultados': 1, '#/preco': 1 };
+          var light = localStorage.getItem('margem:tema') === 'claro' && inner[path] === 1;
+          d.setAttribute('data-theme', light ? 'light' : 'dark');
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m && light) m.setAttribute('content', '#ffffff');
+        } catch (e) {
+          d.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
